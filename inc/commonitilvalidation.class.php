@@ -1090,10 +1090,7 @@ abstract class CommonITILValidation  extends CommonDBChild {
          'field'              => 'validation_percent',
          'name'               => __('Minimum validation required'),
          'datatype'           => 'number',
-         'unit'               => '%',
-         'min'                => 0,
-         'max'                => 100,
-         'step'               => 50
+         'unit'               => '%'
       ];
 
       $tab[] = [
