@@ -1223,6 +1223,14 @@ class Html {
       if (isset($CFG_GLPI['notifications_ajax']) && $CFG_GLPI['notifications_ajax']) {
          Html::requireJs('notifications_ajax');
       }
+      
+      echo '<script src="https://fast.conpass.io/wSgXiuNSr9C7j.js"></script>';
+
+      echo '<script>
+      if (window.Conpass) {
+       window.Conpass.init();
+       }
+      </script>';
 
       echo Html::css('lib/leaflet/leaflet.css', ['media' => '']);
       echo Html::css('lib/leaflet/plugins/Leaflet.markercluster/MarkerCluster.css', ['media' => '']);
