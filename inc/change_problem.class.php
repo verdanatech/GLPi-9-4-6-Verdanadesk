@@ -273,8 +273,12 @@ class Change_Problem extends CommonDBRelation{
 
          echo "<tr class='tab_bg_2'><td>";
          echo "<input type='hidden' name='changes_id' value='$ID'>";
-         Problem::dropdown(['used'   => $used,
-                                 'entity' => $change->getEntityID()]);
+         Problem::dropdown([
+            'used'   => $used,
+            'entity' => $change->getEntityID(),
+            'displaywith' => ['id']
+            ]);
+
          echo "</td><td class='center'>";
          echo "<input type='submit' name='add' value=\""._sx('button', 'Add')."\" class='submit'>";
          echo "</td></tr></table>";

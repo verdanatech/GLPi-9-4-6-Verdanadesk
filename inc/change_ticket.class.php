@@ -397,6 +397,7 @@ class Change_Ticket extends CommonDBRelation{
          echo "<tr class='tab_bg_2'><td>";
          echo "<input type='hidden' name='tickets_id' value='$ID'>";
          Change::dropdown(['used'        => $used,
+                           'displaywith' => ['id'],
                                 'entity'      => $ticket->getEntityID()]);
          echo "</td><td class='center'>";
          echo "<input type='submit' name='add' value=\""._sx('button', 'Add')."\" class='submit'>";
